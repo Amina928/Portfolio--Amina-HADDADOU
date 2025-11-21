@@ -1,0 +1,68 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  max-height: 500px;
+  justify-content: center;
+  padding: 20px 34px;
+  background: #e8dede;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+  text-align: center;
+  text-decoration: double;
+  font-size: 1.1rem;
+}
+
+.contacts:hover {
+  background: #d89b9b;
+  transform: translateY(-2px);
+}
+.link  {
+  color: rgb(108, 38, 38);
+  text-decoration: none;
+}
+h1{
+    text-align: center;
+    color:#c64545;
+    font-style: italic;
+}
+.container{
+    gap:3px;
+    display: flex;
+    margin:  auto;
+    padding: 40px;
+    justify-items: center;
+    position: relative;
+    min-height: 400px;
+    min-width: 200px;
+    background: linear-gradient(180deg, #fff, #f3f7ff);
+    justify-content: center;
+    
+   border-radius: 15px;
+  
+   margin: 20px auto; /* centre */
+   text-align: center;
+}
+
+
+.gras{
+    font-weight: bolder;
+    display: inline;
+    margin-right: 8px;
+}
+.tel{
+    color: rgb(127, 32, 32);
+    text-decoration: none;
+}
+.mail{
+    color: rgb(101, 21, 21);
+    text-decoration: none;
+}
+.titre{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bolder;
+}

@@ -1,0 +1,103 @@
+
+:root{
+  --bg: #faf3f3;
+  --card: #f8e9e9;
+  --accent: #c54444;
+  --muted: #faebeb;
+  --text: #000000;
+  --radius: 10px;
+  --max-width: 1000px;
+  --gap: 20px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding:24px;
+}
+
+/* Container */
+.container{max-width:1000px;margin:0 auto;padding:10px;text-shadow: #e89494;}
+
+/* Title */
+h1{margin-bottom:40px;color:rgb(187, 38, 38);font-size:3rem;text-align:center;text-shadow: #e89494;font-style: italic;}
+
+/* Table wrapper for horizontal scroll on small screens */
+.table-wrapper{overflow-x:auto;border-radius:var(--radius);padding:20px;background:linear-gradient(180deg,#fff,#ffffff);
+box-shadow:0 6px 18px rgba(243, 144, 144, 0.279);}
+
+/* Table styles */
+table.grades{
+  width:100%;
+  border-collapse:separate;
+  
+ 
+  background:#fff;
+  
+}
+
+table tr.diplome{
+  font-weight:700;
+  color: #f7b0b0;
+  background-color: #fff5f5;
+  border-bottom:2px solid rgb(134, 62, 62);
+}
+
+
+
+table.grades thead th{
+  text-align:left;
+  padding: 14px;
+  background:var(--card);
+  color:var(--accent);
+  font-weight:700;
+  border-bottom:2px solid rgb(134, 62, 62);
+}
+
+table.grades tbody td, table.grades tfoot th, table.grades tfoot td{
+  padding:12px;
+  border-bottom:1px solid rgba(211, 157, 157, 0.468);
+  vertical-align:middle;
+  word-wrap: break-word;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+/* Zebra rows */
+
+
+ 
+table.thead tr:nth-child(even){background: #ffffff;}
+
+/* Hover */
+table.grades tbody tr:hover{background:rgb(247, 220, 220)}
+
+/* Footer row styling */
+table.grades tfoot th{
+  text-align:left;
+  background:#f8e7e7;
+  color:var(--accent);
+  border-top:2px solid rgba(96, 67, 67, 0);
+  padding:14px;
+  border-bottom:2px solid rgb(134, 62, 62);
+  font-weight: 700;
+}
+
+
+/* Responsive tweaks */
+@media (max-width:700px){
+  h1{font-size:1.25rem}
+  table.grades{min-width:520px}
+  table.grades thead th,
+  table.grades tbody td{padding:10px}
+  .table-wrapper{padding:6px}
+}
+@media (max-width:420px){
+  table.grades{min-width:480px}
+  table.grades caption{font-size:0.95rem}
+  .note{font-size:0.9rem}
+}
+
+           
