@@ -5,17 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes contacts</title>
     <link rel="stylesheet" href="contacts.css">
+
 </head>
 <body>
+    <nav class="bare">
+       <a href="index.html">Presentation</a>
+       <a href="parcours.html">Mon parcours</a>
+       <a href="competences.html">Mes competances</a>
+       <a href="projets.html">Mes projets</a>
+       <a href="contacts.html">Mes contacts</a>
+    </nav>
     <header>
         <h1 class="titre">Mes contacts</h1>
         <ul class="container">
             
             <li class="contacts"><p class="gras">Téléphone: </p><a href="tel:+33 7 45 01 15 66" class="tel">+33 7 45 01 15 66</a></li>
             <li class="contacts"><p class="gras">Email: </p><a href="amina2025haddadou@gmail.com" class="mail">amina2025haddadou@gmail.com</a></li>
-            <li class="contacts "><p class="gras">LinkedIn:</p><a href="https://www.linkedin.com/in/amina-haddadou-50492936a/" class="link">MonLienLinkedin</li>
+            <li class="contacts "><p class="gras">LinkedIn:</p><a href="https://www.linkedin.com/in/amina-haddadou-50492936a/" class="link">MonLienLinkedin</a></li>
         </ul>
 
     </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <div>
+                    <label for="Nom">Votre Nom :</label>
+                    <input type="text"  id="Nom" name="Nom" placeholder="Nom Prenom">
+                </div>
+                <div>
+                    <label for="Date">Votre date de naissance :</label>
+                    <input type="date"  name="date" max="2008-12-31">
+                </div>
+                <div>
+                    <label for="sexe">sexe</label>
+                    <select name="sexe" id="sexe">
+                        <option value="sexe">Femme</option>
+                        <option value="sexe">Homme</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Info compte</legend>
+                <div>
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="username" minlength="5" placeholder="Nom d'utilisateur">
+                </div>
+                <div>
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" placeholder="Mot de passe">
+                </div>
+                <div>
+                    <label for="mail">Email :</label>
+                    <input type="text" id="mail" name="mail" placeholder="nomprenom@gmail.com">
+                </div>
+                <div>
+                    <label><input type="checkbox" name="accepter" required>Accepter les conditions général</label>
+                </div>
+            </fieldset>
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message"></textarea>
+
+            <br>
+            <button type="submit">envoyer</button>
+            <button type="reset">effacer</button>
+        </form>
+    </main>
 </body>
 </html>

@@ -10,12 +10,15 @@
   --gap: 20px;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0;}
 body{
   font-family: Inter, system-ui, Arial, sans-serif;
   background:var(--bg);
   color:var(--text);
   padding:24px;
+  
+  
+ 
 }
 
 /* Container */
@@ -100,4 +103,55 @@ table.grades tfoot th{
   .note{font-size:0.9rem}
 }
 
-           
+   
+.bare {
+    width: 100%;
+    background: #b85151;        /* couleur de fond */
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    border: #b85151;
+    border-radius: 5px;
+    
+}
+
+/* --- Liens dans la navbar --- */
+.bare a {
+    color: #fbe8e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 14px;
+    transition: 0.3s ease;
+    border-radius: 8px;
+    text-decoration: underline;
+}
+
+/* Hover */
+.bare a:hover {
+    background: #aa4a4a;
+    color: white;
+}
+
+/* Page actuelle (active) */
+.bare a.active {
+    background: white;
+    color: #d85c5c;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 700px) {
+    .bare {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .bare a {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+}
