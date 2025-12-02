@@ -17,11 +17,14 @@ body{
   color:var(--text);
   line-height: 2;  /* Espace entre les lignes du text */
   -webkit-font-smoothing:antialiased;
-  max-width:var(--max-width);
-  margin:28px auto;
-  padding:0 6px;  /* Espacement interieur horizontal */
-  
+  max-width:var(--max-width); 
+  min-height: 100vh;
+  padding:0 ;  /* Espacement  */
+  margin:40px 100px;
   background: linear-gradient(135deg, #f3cfcf, #bd7171); /* Dégradé de fond */
+  background-repeat: no-repeat;
+  background-attachment: fixed;  /* pour que le dégradé reste fixe au scroll */
+  background-size: cover;         /* couvre toute la zone du body */
 
 
 }
@@ -53,31 +56,33 @@ header.tete p{color:var(--muted);margin-bottom:8px}
 
 /* Primary button/link */
 a.button{
-  display: inline-block;
   background:rgb(151, 53, 53);
   color:whitesmoke;
   padding:14px 18px;   /* Espacement interne */
   border-radius:8px; /* Arrondi des coins */
   text-decoration:none;
-  font-weight:600;
+  font-weight:900;
   transition:transform .12s ease, box-shadow .12s ease;
   text-align: center;
   min-width: 160px;
   width: 200px;
-  height: 130px;
+  height: 150px;
   margin-top: 50px;
-  line-height: 86px;
   font-size: 19px;
+  display:flex;
+  
+  justify-content: center;
+  align-items: center;
   
 }
 
 .button-container{
   display:flex;
-  flex-direction:row ;
+  flex-direction:row;
   justify-content: center;
   align-items: center;
   gap: 27px;
-  inline-size: 900px;
+ 
 }
 a.button:hover{transform:translateY(-2px);  /* Deplace le boutton vers le haut de 2px */
     box-shadow:0 6px 18px rgba(128, 54, 54, 0.413)}
@@ -117,11 +122,12 @@ section h2{font-size:1.25rem;margin-bottom:10px}
 
 
 /* Small screens */
-@media (max-width:640px){      /* Mobile styles */
-  header.tete{flex-direction:column;align-items:flex-start}
-  header.tete img{width:96px;height:96px}
-  body{margin: auto;padding:0 12px}
+@media (max-width:800px){      /* Mobile styles */
+  
+  body{margin: auto;padding:0 12px;width:100% }
+  .button-container{display: flex;flex-direction: column}
 }
+
 
 
 
@@ -132,7 +138,6 @@ section h2{font-size:1.25rem;margin-bottom:10px}
     justify-content: center;
     gap: 20px;
     margin-bottom: 30px;
-    column-gap: 2px;
     flex-direction: column;
 }
 
@@ -168,8 +173,10 @@ section h2{font-size:1.25rem;margin-bottom:10px}
 
 
 
+
 .bio {
     color: black;
     font-size: 1.3rem;
+    overflow-wrap: break-word;
 }
 

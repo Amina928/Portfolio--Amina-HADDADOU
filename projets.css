@@ -5,7 +5,7 @@
     --muted: #f0c1c1;
     --text: #000000;
     --radius: 10px;
-    --max-width: 1000px;
+    --max-width: 1200px;
     --gap: 20px;
 }
 
@@ -49,7 +49,7 @@
 }
 .project-title{
     font-size: 1.5rem;
-   color:#ca6969;
+    color:#ca6969;
     margin-bottom: 10px;
 }
 .project-description{
@@ -58,7 +58,8 @@
     line-height: 1;
 }
 header{
-    background-color: rgb(241, 209, 209);
+    
+    border-radius: 5px;
 }
 p {
   width: 500px;
@@ -67,13 +68,103 @@ p {
   text-align: justify; /* étire les lignes pour qu’elles remplissent toute la largeur */
 }
 .body{
-    background-color:rgb(253, 178, 190);
+    background-color:var(--bg);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: var(--text);
     max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 20px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+   
+}
+ 
+.bare {
+    width: 100%;
+    background: #b85151;        /* couleur de fond */
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    border: #b85151;
+    border-radius: 5px;
+    
+     
+    
+}
+
+/* --- Liens dans la navbar --- */
+.bare a {
+    color: #fbe8e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 8px 14px;
+    transition: 0.3s ease;
+    border-radius: 8px;
+    text-decoration: underline;
+   
+}
+
+/* Hover */
+.bare a:hover {
+    background: #aa4a4a;
+    color: white;
+}
+
+/* Page actuelle (active) */
+.bare a.active {
+    background: white;
+    color: #d85c5c;
+}
+/* --- RESPONSIVE --- */
+@media (max-width: 700px) {
+    .bare {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .bare a {
+        font-size: 1.5rem;
+        padding: 6px 10px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .projet p {
+       width:100%; 
+
+    }
+    .container p{
+        width: 100%;
+    }
+   
+}
+@media (max-width: 1200px) {
+    .bare {
+        
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px 0;
+    }
+
+    .bare a {
+        font-size: 1rem;
+        padding:10px 0;
+        gap:15px;
+    }
+    .projet p {
+       width:100%; 
+
+    }
+    .container p{
+        width: 100%;
+    }
 }

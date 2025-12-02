@@ -28,7 +28,7 @@ body{
 h1{margin-bottom:40px;color:rgb(187, 38, 38);font-size:3rem;text-align:center;text-shadow: #e89494;font-style: italic;}
 
 /* Table wrapper for horizontal scroll on small screens */
-.table-wrapper{overflow-x:auto;border-radius:var(--radius);padding:20px;background:linear-gradient(180deg,#fff,#ffffff);
+.table-wrapper{border-radius:var(--radius);padding:20px;background:linear-gradient(180deg,#fff,#ffffff);
 box-shadow:0 6px 18px rgba(243, 144, 144, 0.279);}
 
 /* Table styles */
@@ -90,15 +90,16 @@ table.grades tfoot th{
 
 
 /* Responsive tweaks */
-@media (max-width:700px){
+@media (max-width:600px){
   h1{font-size:1.25rem}
-  table.grades{min-width:520px}
+  table.grades{width:100%}
   table.grades thead th,
-  table.grades tbody td{padding:10px}
+  table.grades tbody td{padding:6px}
   .table-wrapper{padding:6px}
+  
 }
-@media (max-width:420px){
-  table.grades{min-width:480px}
+@media (max-width:1200px){
+  table.grades{width:100%}
   table.grades caption{font-size:0.95rem}
   .note{font-size:0.9rem}
 }
@@ -153,5 +154,8 @@ table.grades tfoot th{
     .bare a {
         font-size: 1rem;
         padding: 6px 10px;
+    }
+    table{
+      width: 100%;
     }
 }

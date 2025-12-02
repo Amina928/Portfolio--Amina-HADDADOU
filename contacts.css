@@ -123,6 +123,9 @@ h1{
         font-size: 1rem;
         padding: 6px 10px;
     }
+    .container{
+        flex-wrap: wrap;
+    }
 }
 @media (max-width:1200px){
   .bare {
@@ -134,6 +137,9 @@ h1{
     .bare a {
         font-size: 1rem;
         padding: 6px 10px;
+    }
+    .container{
+        flex-wrap: wrap;
     }
 }
 legend {
