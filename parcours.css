@@ -16,9 +16,6 @@ body{
   background:var(--bg);
   color:var(--text);
   padding:24px;
-  
-  
- 
 }
 
 /* Container */
@@ -35,10 +32,7 @@ box-shadow:0 6px 18px rgba(243, 144, 144, 0.279);}
 table.grades{
   width:100%;
   border-collapse:separate;
-  
- 
-  background:#fff;
-  
+  background:#fff; 
 }
 
 table tr.diplome{
@@ -68,10 +62,6 @@ table.grades tbody td, table.grades tfoot th, table.grades tfoot td{
   font-weight: 600;
 }
 
-/* Zebra rows */
-
-
- 
 table.thead tr:nth-child(even){background: #ffffff;}
 
 /* Hover */

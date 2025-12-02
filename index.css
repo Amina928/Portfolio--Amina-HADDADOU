@@ -11,12 +11,11 @@
 
 /* Basic reset */
 *{box-sizing: border-box; margin:0;padding:0}
-html,body{height:97.6%}
+html,body{height:100%}
 body{
   font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", Arial;
   color:var(--text);
   line-height: 2;  /* Espace entre les lignes du text */
-  -webkit-font-smoothing:antialiased;
   max-width:var(--max-width); 
   min-height: 100vh;
   padding:0 ;  /* Espacement  */
@@ -41,10 +40,8 @@ header.tete img{
   height:120px;
   object-fit:cover;
   border-radius:50%;
-  text-align:center;
-  
- 
 }
+
 header.tete h1{
   font-size:1.6rem;
   margin-bottom:19px;
@@ -69,8 +66,8 @@ a.button{
   height: 150px;
   margin-top: 50px;
   font-size: 19px;
+
   display:flex;
-  
   justify-content: center;
   align-items: center;
   
@@ -121,18 +118,7 @@ section h2{font-size:1.25rem;margin-bottom:10px}
 
 
 
-/* Small screens */
-@media (max-width:800px){      /* Mobile styles */
-  
-  body{margin: auto;padding:0 12px;width:100% }
-  .button-container{display: flex;flex-direction: column}
-}
-
-
-
-
-
-
+/*bare de navigation*/
 .nav-bar {
     display: flex;
     justify-content: center;
@@ -160,7 +146,6 @@ section h2{font-size:1.25rem;margin-bottom:10px}
     color: rgb(156, 23, 23);
     font-size: 1.2rem;
     margin-bottom: 10px;
-    justify-self: unset;
     font-style: italic;
 }
 .profil {
@@ -168,6 +153,9 @@ section h2{font-size:1.25rem;margin-bottom:10px}
   margin-left: 0;
   margin-right: 50px;
   margin-bottom: 10px;
+  width:150px;
+  height:160px;
+  border-radius:60%;
 }
 
 
@@ -180,3 +168,9 @@ section h2{font-size:1.25rem;margin-bottom:10px}
     overflow-wrap: break-word;
 }
 
+/* Small screens */
+@media (max-width:800px){      /* Mobile styles */
+  
+  body{margin: auto;padding:0 12px;width:100% }
+  .button-container{display: flex;flex-direction: column}
+}
